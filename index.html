@@ -1,0 +1,468 @@
+<html>
+  <head>
+    <title>Investment Opportunity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Investment opportunity for a prime commercial property with 6.83% cap rate and strong demographics" />
+    <meta property="og:title" content="Commercial Real Estate Investment Opportunity" />
+    <meta property="og:description" content="Prime location commercial property investment with 6.83% cap rate" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #1a2b4b;
+        --accent-color: #2563eb;
+        --text-color: #334155;
+        --background-color: #f1f5f9;
+        --card-background: #ffffff;
+        --success-color: #059669;
+        --border-color: #e2e8f0;
+        --highlight-gradient: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      .page {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 40px 20px;
+        background: var(--card-background);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      }
+
+      .header {
+        color: var(--primary-color);
+        font-size: 2.5em;
+        font-weight: 600;
+        margin-bottom: 30px;
+        line-height: 1.2;
+      }
+
+      .metric-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .metric-card {
+        background: var(--card-background);
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+      }
+
+      .metric-card h3 {
+        font-size: 1.1em;
+        font-weight: 500;
+        margin: 0 0 15px 0;
+      }
+
+      .metric-value {
+        font-size: 2em;
+        font-weight: 600;
+        color: var(--accent-color);
+        margin: 10px 0;
+      }
+
+      .highlight-box {
+        background: var(--primary-color);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin: 30px 0;
+      }
+
+      .highlight-box h3 {
+        margin-top: 0;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .highlight-box ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .highlight-box li {
+        margin-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        font-size: 0.9em;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      th {
+        background: var(--primary-color);
+        color: white;
+        font-weight: 500;
+      }
+
+      .contact-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .contact-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+        text-align: center;
+      }
+
+      .disclaimer {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 0.9em;
+        color: #666;
+        padding: 20px;
+        border-top: 1px solid var(--border-color);
+      }
+
+      /* Mobile Responsiveness */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 14px;
+        }
+
+        .page {
+          padding: 20px 15px;
+          margin: 10px;
+        }
+
+        .header {
+          font-size: 2em;
+        }
+
+        .metric-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .metric-value {
+          font-size: 1.8em;
+        }
+
+        table {
+          display: block;
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+
+        th,
+        td {
+          padding: 8px 12px;
+        }
+      }
+
+      /* Print Styles */
+      @media print {
+        @page {
+          margin: 0.5cm;
+          size: A4;
+        }
+
+        body {
+          background: white;
+          font-size: 12pt;
+          color: black;
+          margin: 0;
+          padding: 0;
+        }
+
+        .page {
+          margin: 0;
+          padding: 20px;
+          box-shadow: none;
+          border: none;
+          max-width: 100%;
+          page-break-after: always;
+        }
+
+        .metric-grid {
+          page-break-inside: avoid;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+
+        .metric-card {
+          break-inside: avoid;
+          border: 1px solid #ddd;
+          background: none !important;
+          box-shadow: none;
+        }
+
+        .highlight-box {
+          background-color: var(--primary-color) !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+          break-inside: avoid;
+        }
+
+        table {
+          break-inside: avoid;
+          font-size: 11pt;
+        }
+
+        th {
+          background-color: var(--primary-color) !important;
+          color: white !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        tr {
+          break-inside: avoid;
+        }
+
+        .contact-container {
+          break-inside: avoid;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+
+        .contact-card {
+          break-inside: avoid;
+          border: 1px solid #ddd;
+        }
+
+        /* Ensure all colors print */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        /* Remove any hover effects */
+        *:hover {
+          transform: none !important;
+          box-shadow: none !important;
+        }
+
+        /* Hide decorative elements */
+        .metric-card::before,
+        .highlight-box::before,
+        .page::before {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Executive Summary -->
+    <div class="page">
+      <h1 class="header">Executive Summary</h1>
+      <div class="section">
+        <div class="metric-grid">
+          <div class="metric-card">
+            <h3>Purchase Price</h3>
+            <div class="metric-value">$3,300,000</div>
+          </div>
+          <div class="metric-card">
+            <h3>Building Size</h3>
+            <div class="metric-value">13,502 SF</div>
+          </div>
+          <div class="metric-card">
+            <h3>Cap Rate</h3>
+            <div class="metric-value">6.83%</div>
+          </div>
+          <div class="metric-card">
+            <h3>NOI</h3>
+            <div class="metric-value">$225,388</div>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <h3>Investment Highlights</h3>
+          <ul>
+            <li>Prime location at Windemere Country Club entrance</li>
+            <li>Strong demographics - $201,209 average household income</li>
+            <li>Diverse, stable tenant mix</li>
+            <li>Below market replacement cost</li>
+            <li>Value-add potential</li>
+            <li>
+              A nearby property sold for $405 per square foot, while ours is priced at $244.44 per square foot—nearly 40% lower, offering exceptional
+              value.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Investment Structure -->
+    <div class="page">
+      <h1 class="header">Investment Structure</h1>
+      <div class="section">
+        <div class="metric-grid">
+          <div class="metric-card">
+            <h3>Down Payment</h3>
+            <div class="metric-value">$1,155,000</div>
+            <p>35% of Purchase Price</p>
+          </div>
+          <div class="metric-card">
+            <h3>Loan Amount</h3>
+            <div class="metric-value">$2,145,000</div>
+            <p>65% LTV</p>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <h3>Per Investor (10 Equal Shares)</h3>
+          <ul>
+            <li>Investment Required: $141,900</li>
+            <li>Annual Cash Flow: $6,269</li>
+            <li>Projected 5-Year Total Return: $230,597</li>
+            <li>Equity Multiple: 1.63x</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financial Projections -->
+    <div class="page">
+      <h1 class="header">Financial Projections</h1>
+      <div class="section">
+        <table>
+          <tr>
+            <th>Metric</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>Gross Income</td>
+            <td>$275,000</td>
+          </tr>
+          <tr>
+            <td>Operating Expenses</td>
+            <td>$49,612</td>
+          </tr>
+          <tr>
+            <td>NOI</td>
+            <td>$225,388</td>
+          </tr>
+          <tr>
+            <td>Debt Service</td>
+            <td>($162,696)</td>
+          </tr>
+          <tr>
+            <td>Net Cash Flow</td>
+            <td>$62,692</td>
+          </tr>
+        </table>
+        <div class="metric-grid">
+          <div class="metric-card">
+            <h3>Average Annual ROI</h3>
+            <div class="metric-value">12.50%</div>
+          </div>
+          <div class="metric-card">
+            <h3>Total ROI</h3>
+            <div class="metric-value">62.51%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rent Roll -->
+    <div class="page">
+      <h1 class="header">Current Rent Roll</h1>
+      <table>
+        <tr>
+          <th>Unit</th>
+          <th>Tenant</th>
+          <th>SF</th>
+          <th>Annual Rent</th>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>Fifth Ave Nails</td>
+          <td>2,200</td>
+          <td>$43,500</td>
+        </tr>
+        <tr>
+          <td>200</td>
+          <td>Music & Arts Studio</td>
+          <td>2,250</td>
+          <td>$45,600</td>
+        </tr>
+        <tr>
+          <td>300</td>
+          <td>Prime Combat Sports</td>
+          <td>2,275</td>
+          <td>$47,100</td>
+        </tr>
+        <tr>
+          <td>400</td>
+          <td>Apollo Spain & Pain</td>
+          <td>2,275</td>
+          <td>$46,980</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>Naatyaveda Dance Academy</td>
+          <td>2,200</td>
+          <td>$43,200</td>
+        </tr>
+        <tr>
+          <td>600</td>
+          <td>Windermere Animal Hospital</td>
+          <td>2,300</td>
+          <td>$48,600</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Market Analysis -->
+    <div class="page">
+      <h1 class="header">Market Analysis</h1>
+      <div class="section">
+        <div class="metric-grid">
+          <div class="metric-card">
+            <h3>Population (1-Mile)</h3>
+            <div class="metric-value">10,705</div>
+          </div>
+          <div class="metric-card">
+            <h3>Avg Household Income</h3>
+            <div class="metric-value">$201,209</div>
+          </div>
+          <div class="metric-card">
+            <h3>Total Households</h3>
+            <div class="metric-value">3,280</div>
+          </div>
+          <div class="metric-card">
+            <h3>Avg Home Value</h3>
+            <div class="metric-value">$629,377</div>
+          </div>
+        </div>
+        <div class="highlight-box">
+          <h3>Traffic Counts</h3>
+          <ul>
+            <li>Buford Hwy: 36,200 VPD</li>
+            <li>Sharon Rd: 15,840 VPD</li>
+            <li>Peachtree Pkwy: 43,342 VPD</li>
+            <li>Old Atlanta Rd: 25,100 VPD</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
